@@ -4,27 +4,30 @@ import { siteConfig } from "@/config/site";
 
 const offers = [
   {
-    title: "Security Assessment & Hardening",
+    title: "Secure Foundations Review",
     bullets: [
-      "Prioritized findings, Day-0 fixes, 30–60–90d roadmap",
-      "Entra ID / M365 posture, Conditional Access, PAM stance",
-      "Outcome: clearer actions, reduced risk, fewer surprises",
+      "A calm, complete look at your systems — cloud to floor — through a privacy-first lens",
+      "Compliance checked (PIPEDA, PCI) and every finding mapped to simple next actions",
+      "Delivered as a clear report and executive summary you can act on",
+      "Outcome: Confidence, clarity, and technology that endures",
     ],
   },
   {
-    title: "AI Strategy for the Practical Org",
+    title: "AI Jumpstart for Practical Humans",
     bullets: [
-      "3–5 validated use-cases + lightweight architecture",
-      "Guardrails first, measurable ROI",
-      "Outcome: time back, better quality, no data leaks",
+      "Explore where AI actually fits in your daily work — no hype, just clarity",
+      "Hands-on workshop or consultation to identify secure, high-impact use-cases",
+      "Platform-agnostic approach focused on privacy, governance, and practical ROI",
+      "Outcome: Confidence to use AI safely, effectively, and on your own terms",
     ],
   },
   {
-    title: "Custom LibreChat (Private, Internal)",
+    title: "Private ChatGPT",
     bullets: [
-      "Working instance + governance + admin guide",
-      "Optional n8n integrations & retrieval",
-      "Outcome: useful chat that stays in your walls",
+      "Runs on your server or Manitoba-hosted by us — no chats or files are sent to public AI",
+      "Connects safely to your docs and tools (M365/SharePoint, file shares, n8n/MCP) with access controls",
+      "Includes governance, admin training, and optional managed support",
+      "Outcome: Your team can finally use AI with confidential data—summarize, draft, and search—without privacy risk",
     ],
   },
 ];
@@ -89,26 +92,29 @@ export default function Page() {
           />
           <div className="mx-auto max-w-5xl px-6 py-24 text-center">
             <p className="inline-flex items-center gap-2 rounded-full border border-zinc-800 bg-zinc-900/60 px-3 py-1 text-xs text-zinc-400">
-              Privacy-first • Zero tracking • Manitoba hosted
+              Secure foundations • Human focus • Local roots
             </p>
             <h1 className="mt-6 text-balance text-4xl font-semibold tracking-tight md:text-6xl">
-              Secure. Automate. Build what lasts.
+              Protect people • Simplify operations • Build to endure
             </h1>
             <p className="mx-auto mt-4 max-w-2xl text-zinc-300">
-              Practical security and AI implementation for SMBs—Entra/M365
-              hardening, real-world automation, and private LibreChat. Calm,
-              competent, within budget.
+              After 20+ years securing complex systems, I’ve learned that lasting
+              solutions come from simplicity. I help organizations protect what
+              matters, streamline routine work, and build technology they can rely on.
+            </p>
+            <p className="mx-auto mt-3 max-w-2xl text-sm text-zinc-500">
+              — Wally Kroeker, Technical Architect
             </p>
             <div className="mt-8 flex items-center justify-center gap-4">
               <Link
                 href={siteConfig.bookingUrl}
-                className="rounded-xl bg-emerald-500 px-5 py-3 text-sm font-medium text-black hover:bg-emerald-400 focus:outline-none focus:ring-4 focus:ring-emerald-500/30"
+                className="inline-flex items-center justify-center rounded-xl bg-emerald-500 px-5 py-3 text-sm font-medium text-black transition duration-200 hover:-translate-y-0.5 hover:bg-emerald-400 focus:outline-none focus:ring-4 focus:ring-emerald-500/30"
               >
                 Book a free 60-minute consult
               </Link>
               <Link
                 href={`mailto:${siteConfig.contactEmail}`}
-                className="text-sm text-zinc-300 underline underline-offset-4 hover:text-zinc-100"
+                className="inline-flex items-center justify-center rounded-xl border border-zinc-700 px-5 py-3 text-sm font-medium text-zinc-200 transition duration-200 hover:-translate-y-0.5 hover:border-zinc-500 hover:text-zinc-100 focus:outline-none focus:ring-4 focus:ring-emerald-500/30"
               >
                 Email Wally
               </Link>
@@ -118,7 +124,9 @@ export default function Page() {
 
         <section id="offers" className="border-t border-zinc-800 py-16">
           <div className="mx-auto max-w-5xl px-6">
-            <h2 className="text-2xl font-semibold md:text-3xl">What we do</h2>
+            <h2 className="text-2xl font-semibold md:text-3xl">
+              Security &amp; AI Strategy for Practical Humans
+            </h2>
             <div className="mt-8 grid gap-6 md:grid-cols-3">
               {offers.map((offer) => (
                 <article

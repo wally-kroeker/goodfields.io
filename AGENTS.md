@@ -49,3 +49,17 @@
 - Wire in security headers (`next.config.mjs`) and document the Proxmox deployment script.  
 - Build modular components for hero, offers, proof strip, and CTA to cut duplication.  
 - Generate OG artwork and ensure `metadata.openGraph.images` paths resolve.
+
+## Copywriting Checklist (WIP)
+1. ✅ Hero chip (`Secure foundations • Human focus • Local roots`) — messaging finalized.  
+2. ✅ Hero headline (`Protect people • Simplify operations • Build to endure`) — positioning locked.  
+3. ✅ Hero body paragraph + signature — highlights 20+ years experience and introduces Wally by name/title.  
+4. ✅ Primary CTA label (`Book a free 60-minute consult`) — confirmed accurate.  
+5. ✅ Secondary CTA label (`Email Wally`) — confirmed; styling aligned with primary CTA.  
+6. ✅ Offers section heading (`Security & AI Strategy for Practical Humans`) — IA label finalized.  
+7. ✅ Offer cards (titles + bullets) — rewritten for clarity and consistent voice.  
+8. Proof strip sentence — tighten accolades and technical stack references.  
+9. CTA section heading & paragraph (`Map your quickest win`, etc.) — align promise with actual session outcomes.  
+10. CTA button text (`Book a free call`) — match with booking flow copy.  
+11. Footer privacy statement — finalize legal wording.  
+12. Footer link labels — confirm destinations and naming (community link TBD).
