@@ -30,6 +30,12 @@
 - PRs should mention the PRD section they touch, note any TODOs left behind, and attach screenshots of key breakpoints (mobile + desktop).  
 - Keep branches short-lived; rebase onto `main` rather than merging `main` into feature branches.
 
+## Source Control & Remote
+- Repo origin: `https://github.com/wally-kroeker/goodfields.io.git` (tracked via branch `main`).  
+- Initial scaffold pushed in commit `64334cd` (`feat: bootstrap goodfields landing project`).  
+- Sync workflow: `git pull --rebase origin main` before starting new work; force pushes are discouraged.  
+- Tag production-ready releases using `v0.x.y` once deploy automation is in place.
+
 ## Asset Backlog
 - Favicon set (`favicon.ico`, `site.webmanifest`, `apple-touch-icon.png`).  
 - 1200×630 OpenGraph card matching the zinc/emerald palette.  
