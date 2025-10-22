@@ -3,27 +3,31 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+  color-scheme: dark;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  @apply bg-zinc-950 text-zinc-50 font-sans leading-relaxed;
+}
+
+main {
+  @apply min-h-screen;
+}
+
+a {
+  @apply text-emerald-400 underline-offset-4 transition-colors duration-200;
+}
+
+a:hover {
+  @apply text-emerald-300;
+}
+
+a:focus-visible {
+  @apply outline-none ring-2 ring-emerald-400 ring-offset-2 ring-offset-zinc-900;
+}
+
+button:focus-visible {
+  @apply outline-none ring-2 ring-emerald-400 ring-offset-2 ring-offset-zinc-900;
 }
 
 @layer utilities {
