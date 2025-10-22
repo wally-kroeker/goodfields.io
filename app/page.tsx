@@ -14,7 +14,7 @@ const offers = [
   {
     title: "AI Strategy for the Practical Org",
     bullets: [
-      "3–5 validated use cases plus lightweight architecture",
+      "3–5 validated use-cases + lightweight architecture",
       "Guardrails first, measurable ROI",
       "Outcome: time back, better quality, no data leaks",
     ],
@@ -22,7 +22,7 @@ const offers = [
   {
     title: "Custom LibreChat (Private, Internal)",
     bullets: [
-      "Working instance, governance, and admin guide",
+      "Working instance + governance + admin guide",
       "Optional n8n integrations & retrieval",
       "Outcome: useful chat that stays in your walls",
     ],
@@ -53,7 +53,7 @@ const structuredData = {
   ],
 };
 
-export default function Home() {
+export default function Page() {
   return (
     <>
       <Script
@@ -62,119 +62,130 @@ export default function Home() {
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-      <main className="flex flex-col gap-24 px-6 pb-24 pt-16 md:px-12 lg:px-20">
-        <header className="flex flex-col gap-6 text-balance">
-          <span className="text-sm uppercase tracking-[0.3em] text-emerald-300">
-            Privacy-first consulting
-          </span>
-          <h1 className="max-w-3xl text-4xl font-semibold sm:text-5xl">
-            Secure. Automate. Build what lasts.
-          </h1>
-          <p className="max-w-2xl text-lg text-zinc-300">
-            Practical security and AI implementation for SMBs—Entra/M365
-            hardening, real-world automation, and private LibreChat. Calm,
-            competent, within budget.
-          </p>
-          <div className="flex flex-wrap items-center gap-4 text-sm text-zinc-400">
-            <span className="rounded-full border border-zinc-700 px-3 py-1">
-              Privacy-first • Zero tracking • Manitoba hosted
-            </span>
-          </div>
-          <div className="flex flex-col gap-3 sm:flex-row">
-            <Link
-              href={siteConfig.bookingUrl}
-              className="inline-flex items-center justify-center rounded-full bg-emerald-500 px-6 py-3 font-semibold text-zinc-950 transition hover:bg-emerald-400 focus-visible:bg-emerald-400"
-            >
-              Book a free 60-minute consult
+      <main className="min-h-dvh bg-zinc-950 text-zinc-100">
+        <header className="sticky top-0 z-50 border-b border-zinc-800/80 bg-zinc-950/80 backdrop-blur">
+          <div className="mx-auto flex h-14 max-w-5xl items-center justify-between px-6">
+            <Link href="/" className="font-semibold tracking-tight">
+              {siteConfig.name}
             </Link>
-            <Link
-              href={`mailto:${siteConfig.contactEmail}`}
-              className="inline-flex items-center justify-center rounded-full border border-emerald-500 px-6 py-3 font-semibold text-emerald-300 hover:border-emerald-400 hover:text-emerald-200"
-            >
-              Email Wally
-            </Link>
+            <nav className="hidden items-center gap-6 text-sm text-zinc-300 md:flex">
+              <Link href="#offers" className="hover:text-zinc-100">
+                Offers
+              </Link>
+              <Link href="#about" className="hover:text-zinc-100">
+                About
+              </Link>
+              <Link href="#book" className="hover:text-zinc-100">
+                Book
+              </Link>
+            </nav>
           </div>
         </header>
 
-        <section aria-labelledby="offers-heading" className="space-y-8">
-          <div className="space-y-2">
-            <h2 id="offers-heading" className="text-2xl font-semibold">
-              Offers tuned for practical teams
-            </h2>
-            <p className="max-w-2xl text-zinc-400">
-              Each engagement is scoped to land quick wins while building
-              durable systems. These cards mirror the PRD copy so we can refine
-              the layout next pass.
+        <section className="relative isolate overflow-hidden">
+          <div
+            aria-hidden
+            className="absolute inset-0 bg-[radial-gradient(60%_60%_at_50%_0%,rgba(16,185,129,.18),transparent_60%)]"
+          />
+          <div className="mx-auto max-w-5xl px-6 py-24 text-center">
+            <p className="inline-flex items-center gap-2 rounded-full border border-zinc-800 bg-zinc-900/60 px-3 py-1 text-xs text-zinc-400">
+              Privacy-first • Zero tracking • Manitoba hosted
+            </p>
+            <h1 className="mt-6 text-balance text-4xl font-semibold tracking-tight md:text-6xl">
+              Secure. Automate. Build what lasts.
+            </h1>
+            <p className="mx-auto mt-4 max-w-2xl text-zinc-300">
+              Practical security and AI implementation for SMBs—Entra/M365
+              hardening, real-world automation, and private LibreChat. Calm,
+              competent, within budget.
+            </p>
+            <div className="mt-8 flex items-center justify-center gap-4">
+              <Link
+                href={siteConfig.bookingUrl}
+                className="rounded-xl bg-emerald-500 px-5 py-3 text-sm font-medium text-black hover:bg-emerald-400 focus:outline-none focus:ring-4 focus:ring-emerald-500/30"
+              >
+                Book a free 60-minute consult
+              </Link>
+              <Link
+                href={`mailto:${siteConfig.contactEmail}`}
+                className="text-sm text-zinc-300 underline underline-offset-4 hover:text-zinc-100"
+              >
+                Email Wally
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        <section id="offers" className="border-t border-zinc-800 py-16">
+          <div className="mx-auto max-w-5xl px-6">
+            <h2 className="text-2xl font-semibold md:text-3xl">What we do</h2>
+            <div className="mt-8 grid gap-6 md:grid-cols-3">
+              {offers.map((offer) => (
+                <article
+                  key={offer.title}
+                  className="rounded-2xl border border-zinc-800 bg-zinc-900/60 p-6"
+                >
+                  <h3 className="text-lg font-semibold">{offer.title}</h3>
+                  <ul className="mt-4 space-y-2 text-sm text-zinc-300">
+                    {offer.bullets.map((bullet) => (
+                      <li key={bullet} className="ml-5 list-disc">
+                        {bullet}
+                      </li>
+                    ))}
+                  </ul>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section id="about" className="py-10">
+          <div className="mx-auto max-w-5xl px-6 text-sm text-zinc-400">
+            <p>
+              SANS-trained Security Architect • 20+ years infra & security •
+              Proxmox/Docker/Cloudflare builder • Privacy-first, zero analytics
             </p>
           </div>
-          <div className="grid gap-6 md:grid-cols-3">
-            {offers.map((offer) => (
-              <article
-                key={offer.title}
-                className="flex h-full flex-col gap-4 rounded-2xl border border-zinc-800 bg-surface-900/60 p-6 shadow-lg shadow-black/20"
+        </section>
+
+        <section id="book" className="border-t border-zinc-800 py-16">
+          <div className="mx-auto max-w-3xl px-6 text-center">
+            <h2 className="text-2xl font-semibold md:text-3xl">
+              Map your quickest win
+            </h2>
+            <p className="mx-auto mt-3 max-w-xl text-zinc-300">
+              In 60 minutes we’ll identify one high-ROI action you can take
+              immediately.
+            </p>
+            <div className="mt-6">
+              <Link
+                href={siteConfig.bookingUrl}
+                className="inline-flex items-center justify-center rounded-xl bg-emerald-500 px-5 py-3 text-sm font-medium text-black hover:bg-emerald-400 focus:outline-none focus:ring-4 focus:ring-emerald-500/30"
               >
-                <h3 className="text-lg font-semibold text-emerald-300">
-                  {offer.title}
-                </h3>
-                <ul className="space-y-2 text-sm text-zinc-300">
-                  {offer.bullets.map((bullet) => (
-                    <li key={bullet} className="leading-relaxed">
-                      {bullet}
-                    </li>
-                  ))}
-                </ul>
-              </article>
-            ))}
+                Book a free call
+              </Link>
+            </div>
           </div>
         </section>
 
-        <section
-          aria-labelledby="proof-heading"
-          className="rounded-2xl border border-emerald-500/30 bg-emerald-500/10 p-6 text-sm text-emerald-100"
-        >
-          <h2 id="proof-heading" className="text-base font-semibold uppercase tracking-wide">
-            Trust signals
-          </h2>
-          <p className="mt-2 text-emerald-100">
-            SANS-trained Security Architect • 20+ years infra & security • Proxmox/Docker/Cloudflare builder • Privacy-first, zero analytics
-          </p>
-        </section>
-
-        <section
-          aria-labelledby="cta-heading"
-          className="rounded-3xl border border-zinc-800 bg-surface-900/60 p-10 text-center shadow-lg shadow-black/30"
-        >
-          <h2 id="cta-heading" className="text-3xl font-semibold">
-            Map your quickest win
-          </h2>
-          <p className="mt-4 text-lg text-zinc-300">
-            In 60 minutes we’ll identify one high-ROI action you can take immediately.
-          </p>
-          <div className="mt-6 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
-            <Link
-              href={siteConfig.bookingUrl}
-              className="inline-flex items-center justify-center rounded-full bg-emerald-500 px-6 py-3 font-semibold text-zinc-950 transition hover:bg-emerald-400 focus-visible:bg-emerald-400"
-            >
-              Book a free call
-            </Link>
-            <Link
-              href={`mailto:${siteConfig.contactEmail}`}
-              className="inline-flex items-center justify-center rounded-full border border-emerald-500 px-6 py-3 font-semibold text-emerald-300 hover:border-emerald-400 hover:text-emerald-200"
-            >
-              Email instead
-            </Link>
+        <footer className="border-t border-zinc-800 py-10 text-sm text-zinc-400">
+          <div className="mx-auto flex max-w-5xl flex-col gap-3 px-6 md:flex-row md:items-center md:justify-between">
+            <p>We don’t run analytics or tracking pixels. Your visit stays here.</p>
+            <nav className="flex gap-4">
+              <Link href="https://wallykroeker.com" className="hover:text-zinc-100">
+                WallyKroeker.com
+              </Link>
+              <Link
+                href="https://discord.gg/placeholder"
+                className="hover:text-zinc-100"
+              >
+                Community
+              </Link>
+              <Link href="/privacy" className="hover:text-zinc-100">
+                Privacy
+              </Link>
+            </nav>
           </div>
-        </section>
-
-        <footer className="space-y-3 border-t border-zinc-800 pt-6 text-sm text-zinc-500">
-          <p>
-            We don’t run analytics or tracking pixels. Your visit stays here.
-          </p>
-          <nav className="flex flex-wrap gap-4">
-            <Link href="https://wallykroeker.com">WK.com</Link>
-            <Link href="https://discord.gg/placeholder">Community (Discord)</Link>
-            <Link href="/privacy">Privacy</Link>
-          </nav>
         </footer>
       </main>
     </>
