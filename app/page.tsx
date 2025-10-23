@@ -88,7 +88,7 @@ export default function Page() {
         <section className="relative isolate overflow-hidden">
           <div
             aria-hidden
-            className="absolute inset-0 bg-[radial-gradient(60%_60%_at_50%_0%,rgba(16,185,129,.18),transparent_60%)]"
+            className="pointer-events-none absolute inset-0 bg-[radial-gradient(60%_60%_at_50%_0%,rgba(16,185,129,.18),transparent_60%)]"
           />
           <div className="mx-auto max-w-5xl px-6 py-24 text-center">
             <p className="inline-flex items-center gap-2 rounded-full border border-zinc-800 bg-zinc-900/60 px-3 py-1 text-xs text-zinc-400">
