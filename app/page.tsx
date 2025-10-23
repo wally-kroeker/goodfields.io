@@ -148,10 +148,10 @@ export default function Page() {
         </section>
 
         <section id="about" className="py-10">
-          <div className="mx-auto max-w-5xl px-6 text-sm text-zinc-400">
+          <div className="mx-auto max-w-5xl px-6 text-sm text-zinc-300">
             <p>
-              SANS-trained Security Architect • 20+ years infra & security •
-              Proxmox/Docker/Cloudflare builder • Privacy-first, zero analytics
+              GoodFields • Stronger security, less noise • Practical AI that respects
+              your data • Local, transparent, human
             </p>
           </div>
         </section>
