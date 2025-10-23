@@ -1,0 +1,14 @@
+# Cloudflare Tunnel Configuration for GoodFields
+# Copy this to config.yml and fill in your tunnel credentials
+
+tunnel: your-tunnel-name-here
+credentials-file: /home/docker/.cloudflared/credentials.json
+
+ingress:
+  # Route goodfields.io to localhost:3000
+  - hostname: goodfields.io
+    service: http://localhost:3000
+  - hostname: www.goodfields.io
+    service: http://localhost:3000
+  # Catch-all for any other hostnames
+  - service: http_status:404

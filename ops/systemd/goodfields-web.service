@@ -1,0 +1,16 @@
+[Unit]
+Description=GoodFields Web Application
+After=network.target
+
+[Service]
+Type=simple
+User=docker
+WorkingDirectory=/home/docker/goodfields.io
+ExecStart=/home/docker/.nvm/versions/node/v22.18.0/bin/pnpm start
+Restart=always
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
