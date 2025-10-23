@@ -147,12 +147,40 @@ export default function Page() {
           </div>
         </section>
 
-        <section id="about" className="py-10">
-          <div className="mx-auto max-w-5xl px-6 text-sm text-zinc-300">
-            <p>
-              GoodFields • Stronger security, less noise • Practical AI that respects
-              your data • Local, transparent, human
-            </p>
+        <section id="about" className="border-t border-zinc-800 py-16">
+          <div className="mx-auto max-w-3xl px-6">
+            <h2 className="text-2xl font-semibold md:text-3xl">
+              About GoodFields
+            </h2>
+            <div className="mt-6 space-y-4 text-zinc-300">
+              <p>
+                I&apos;ve spent 20+ years securing complex systems—from on-prem data centers to modern cloud stacks. Along the way, I learned that <em>lasting solutions come from simplicity</em>, not more tools and dashboards.
+              </p>
+              <p>
+                I started GoodFields because I wanted to work differently:
+              </p>
+              <ul className="space-y-3 pl-5">
+                <li className="flex gap-3">
+                  <span className="text-emerald-400 flex-shrink-0">•</span>
+                  <span><strong>Data sovereignty</strong>: Your information stays under your control. AI tools run on infrastructure you manage. No third parties processing your confidential data.</span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="text-emerald-400 flex-shrink-0">•</span>
+                  <span><strong>Knowledge transfer over dependency</strong>: My goal is to make you capable, not to create perpetual consulting fees.</span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="text-emerald-400 flex-shrink-0">•</span>
+                  <span><strong>Transparent about how things work</strong>: Security doesn&apos;t need to be mysterious. I explain the &quot;why&quot; behind every recommendation.</span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="text-emerald-400 flex-shrink-0">•</span>
+                  <span><strong>Practical ROI</strong>: We focus on changes that reduce risk or save time this quarter, not five-year roadmaps that never ship.</span>
+                </li>
+              </ul>
+              <p className="pt-2">
+                Whether you need M365 hardened, AI guardrails established, or a private ChatGPT for confidential work, I bring calm competence and a bias toward solutions you can understand and maintain yourself.
+              </p>
+            </div>
           </div>
         </section>
 
