@@ -110,7 +110,7 @@ export default function Page() {
                 href={siteConfig.bookingUrl}
                 className="inline-flex items-center justify-center rounded-xl bg-emerald-500 px-5 py-3 text-sm font-medium text-black transition duration-200 hover:-translate-y-0.5 hover:bg-emerald-400 focus:outline-none focus:ring-4 focus:ring-emerald-500/30"
               >
-                Book a free 60-minute consult
+                Book a free 45-minute consult
               </Link>
               <Link
                 href={`mailto:${siteConfig.contactEmail}`}
@@ -162,7 +162,7 @@ export default function Page() {
               Map your quickest win
             </h2>
             <p className="mx-auto mt-3 max-w-xl text-zinc-300">
-              In 60 minutes we’ll identify one high-ROI action you can take
+              In 45 minutes we’ll identify one high-ROI action you can take
               immediately.
             </p>
             <div className="mt-6">
