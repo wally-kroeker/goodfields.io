@@ -6,6 +6,7 @@ After=network.target
 Type=simple
 User=docker
 WorkingDirectory=/home/docker/goodfields.io
+Environment="PATH=/home/docker/.nvm/versions/node/v22.18.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
 ExecStart=/home/docker/.nvm/versions/node/v22.18.0/bin/pnpm start
 Restart=always
 RestartSec=10
